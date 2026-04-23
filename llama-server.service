@@ -1,0 +1,14 @@
+[Unit]
+Description=llama.cpp OpenAI-compatible server
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+ExecStart=/bin/bash -lc /opt/nextcloud-rag/start_llama_server.sh
+Restart=always
+RestartSec=5
+User=root
+
+[Install]
+WantedBy=multi-user.target

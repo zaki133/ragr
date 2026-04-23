@@ -1,0 +1,13 @@
+[Unit]
+Description=Nextcloud RAG sync and index rebuild
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=/opt/nextcloud-rag
+ExecStart=/opt/nextcloud-rag/.venv/bin/python /opt/nextcloud-rag/rag_app.py sync-index
+User=root
+
+[Install]
+WantedBy=multi-user.target

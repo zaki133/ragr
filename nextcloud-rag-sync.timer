@@ -1,0 +1,10 @@
+[Unit]
+Description=Run Nextcloud RAG sync every 3 days
+
+[Timer]
+OnBootSec=10m
+OnUnitActiveSec=3d
+Persistent=true
+
+[Install]
+WantedBy=timers.target
