@@ -19,8 +19,6 @@ This bundle is preconfigured for:
 ## Install
 
 ```bash
-apt update && apt install -y sudo unzip curl
-unzip llamacpp_nextcloud_rag_bundle_llama32_3b.zip
 cd llamacpp_nextcloud_rag_bundle_llama32_3b
 chmod +x install.sh
 ./install.sh
